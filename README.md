@@ -11,6 +11,7 @@
 </div>
 
 # What is this project?
+
 <span><img src="https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=green" /></span>
 <span><img src="https://img.shields.io/badge/Docker-2CA5E0?style=flat&logo=docker&logoColor=white" /></span>
 <span><img src="https://img.shields.io/badge/PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white" /></span>
@@ -36,3 +37,13 @@ This project aims to showcase our publications, literary works, and thoughts thr
 - **HTML, CSS, JavaScript:** Frontend technologies ensuring a visually appealing and interactive user experience.
 - **PostgreSQL:** The database management system employed for storing blog content and user data.
 - **Docker:** Containerization tool for easy deployment.
+
+## Contributions
+
+Contributions to enhance the blog's features, fix bugs, or improve its functionality are welcome! Please follow the guidelines in CONTRIBUTING.md for contributing to this project.
+
+## Get in Touch
+
+Have ideas, suggestions, or feedback? Feel free to reach out to us via email at [moawez.de@gmail.com](mailto:moawez.de@gmail.com) or through our social accounts.
+
+We're excited to have you join us on this literary journey!
