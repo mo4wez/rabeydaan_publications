@@ -69,6 +69,7 @@ MIDDLEWARE = [
     "allauth.account.middleware.AccountMiddleware",
 ]
 
+# debug-tool-bar config
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
