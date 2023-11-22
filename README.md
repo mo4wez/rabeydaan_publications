@@ -10,11 +10,6 @@
   </a>
 </div>
 
-# What is this project?
-
-<span><img src="https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=green" /></span>
-<span><img src="https://img.shields.io/badge/Docker-2CA5E0?style=flat&logo=docker&logoColor=white" /></span>
-<span><img src="https://img.shields.io/badge/PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white" /></span>
 
 # Rabeydaan Publications Blog
 
@@ -32,6 +27,10 @@ This project aims to showcase our publications, literary works, and thoughts thr
 - **Community Engagement:** Foster discussions and interactions among readers, encouraging a vibrant literary community.
 
 ## Technologies Used
+
+<span><img src="https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=green" /></span>
+<span><img src="https://img.shields.io/badge/Docker-2CA5E0?style=flat&logo=docker&logoColor=white" /></span>
+<span><img src="https://img.shields.io/badge/PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white" /></span>
 
 - **Django:** The web framework used for backend development.
 - **HTML, CSS, JavaScript:** Frontend technologies ensuring a visually appealing and interactive user experience.
