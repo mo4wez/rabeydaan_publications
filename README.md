@@ -39,7 +39,7 @@ This project aims to showcase our publications, literary works, and thoughts thr
 
 ## Contributions
 
-Contributions to enhance the blog's features, fix bugs, or improve its functionality are welcome! Please follow the guidelines in CONTRIBUTING.md for contributing to this project.
+Contributions to enhance the blog's features, fix bugs, or improve its functionality are welcome! Please follow the guidelines in this project.
 
 ## Get in Touch
 
