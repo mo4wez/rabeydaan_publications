@@ -8,6 +8,7 @@ django = "*"
 psycopg2-binary = "==2.9.7"
 python-dotenv = "==1.0.0"
 environs = "==9.5.0"
+django-allauth = "*"
 
 [dev-packages]
 
