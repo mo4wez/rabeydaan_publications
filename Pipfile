@@ -13,6 +13,7 @@ django-debug-toolbar = "*"
 django-extensions = "*"
 pillow = "*"
 django-ckeditor = "*"
+python-slugify = "*"
 
 [dev-packages]
 
