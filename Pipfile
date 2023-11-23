@@ -10,6 +10,9 @@ python-dotenv = "==1.0.0"
 environs = "==9.5.0"
 django-allauth = "*"
 django-debug-toolbar = "*"
+django-extensions = "*"
+pillow = "*"
+django-ckeditor = "*"
 
 [dev-packages]
 
