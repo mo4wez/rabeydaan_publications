@@ -39,4 +39,30 @@ class Post(models.Model):
     
     def get_absolute_url(self):
         return reverse("blog:post_detail", kwargs={"slug": self.slug})
+
+
+class Comment(models.Model):
+    COMMENT_WAITING = 'wa'
+    COMMENT_APPROVED = 'ap'
+    COMMENT_NOT_APPROVED = 'na'
+
+    STATUS_CHOICES = [
+        (COMMENT_WAITING,'Waiting'),
+        (COMMENT_APPROVED,'Approved'),
+        (COMMENT_NOT_APPROVED,'Not Approved'),
+    ]
+
+    post = models.ForeignKey(to=Post, related_name='comments', on_delete=models.CASCADE)
+    user = models.ForeignKey(to=get_user_model(), related_name='comments', on_delete=models.CASCADE)
+    text = models.CharField(max_length=255)
+    status = models.CharField(max_length=2, choices=STATUS_CHOICES, default=COMMENT_NOT_APPROVED)
+    active = models.BooleanField(default=False)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    modified_at = models.DateTimeField(auto_now=True)
+    
+    def __str__(self) -> str:
+        return f'commentt {self.id}'
+    
+
     
