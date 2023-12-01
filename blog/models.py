@@ -2,11 +2,12 @@ from django.db import models
 from django.urls import reverse
 from django.contrib.auth import get_user_model
 from ckeditor.fields import RichTextField
-from autoslug import AutoSlugField
+from django_extensions.db.fields import AutoSlugField
+from slugify import slugify
 
 
 def custom_slugify(value):
-    return value.replace(' ', '-')
+    return slugify(value, separator='-', allow_unicode=True)
 
 class Post(models.Model):
     POST_PUBLISHED = 'pub'
@@ -23,7 +24,7 @@ class Post(models.Model):
     image = models.ImageField(upload_to='blog/post_image/', blank=True)
     status = models.CharField(max_length=3, choices=STATUS_CHOICES, default=POST_DRAFT)
     active = models.BooleanField(default=False)
-    slug = AutoSlugField(populate_from='title', slugify=custom_slugify)
+    slug = AutoSlugField(populate_from=['name'], unique=True, allow_unicode=True, slugify_function=custom_slugify)
 
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
@@ -32,8 +33,8 @@ class Post(models.Model):
     def __str__(self) -> str:
         return self.title
     
-    def get_absolute_url(self):
-        return reverse("blog:post_detail", kwargs={"slug": self.slug})
+    # def get_absolute_url(self):
+    #     return reverse("blog:post_detail", kwargs={"slug": self.slug})
 
 
 class Comment(models.Model):
