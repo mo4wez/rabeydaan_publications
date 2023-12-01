@@ -23,10 +23,7 @@ class Post(models.Model):
     image = models.ImageField(upload_to='blog/post_image/', blank=True)
     status = models.CharField(max_length=3, choices=STATUS_CHOICES, default=POST_DRAFT)
     active = models.BooleanField(default=False)
-    slug = AutoSlugField(
-        populate_from='title',
-        slugify=custom_slugify,
-        )
+    slug = AutoSlugField(populate_from='title', slugify=custom_slugify)
 
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
@@ -61,6 +58,4 @@ class Comment(models.Model):
     
     def __str__(self) -> str:
         return f'commentt {self.id}'
-    
-
     
