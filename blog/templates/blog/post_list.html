@@ -8,5 +8,6 @@
         <p>
             {{post.description | safe}}
         </p>
+        <a href="{{post.get_absolute_url}}">see more</a>
     {% endfor %}
 {% endblock content %}
