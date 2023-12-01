@@ -4,6 +4,9 @@
 
 {% block content %}
     {% for post in posts %}
-        {{post.title}}
+        <h1>{{post.title}}</h1>
+        <p>
+            {{post.description | safe}}
+        </p>
     {% endfor %}
 {% endblock content %}
