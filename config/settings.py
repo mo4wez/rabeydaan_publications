@@ -47,8 +47,8 @@ INSTALLED_APPS = [
     # third-party apps
     'allauth',
     'allauth.account',
-    'debug_toolbar',
     'ckeditor',
+    'debug_toolbar',
 
     # local apps
     'accounts.apps.AccountsConfig',
@@ -71,10 +71,11 @@ MIDDLEWARE = [
     "allauth.account.middleware.AccountMiddleware",
 ]
 
-# debug-tool-bar config
-INTERNAL_IPS = [
-    "127.0.0.1",
-]
+# do it when using Docker
+if DEBUG:
+    import socket  # only if you haven't already imported this
+    hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+    INTERNAL_IPS = [ip[: ip.rfind(".")] + ".1" for ip in ips] + ["127.0.0.1", "10.0.2.2"]
 
 ROOT_URLCONF = 'config.urls'
 
