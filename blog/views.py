@@ -15,3 +15,6 @@ class PostDetailView(generic.DetailView):
     mdoel = Post
     template_name = 'blog/post_detail.html'
     context_object_name = 'post'
+
+    def get_queryset(self):
+        return Post.objects.filter(active=True)
