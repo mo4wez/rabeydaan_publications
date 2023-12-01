@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Post, Comment
+from .models import Post, Comment, Favorite
 
 
 class CommentsInline(admin.StackedInline):
@@ -21,3 +21,8 @@ class CommentAdmin(admin.ModelAdmin):
     list_display = ['id', 'user', 'post', 'status', 'active', 'created_at',]
     search_fields = ['user', 'post',]
     list_editable = ['status', 'active',]
+
+@admin.register(Favorite)
+class FavoriteAdmin(admin.ModelAdmin):
+    list_display = ['id', 'user', 'post', 'created_at',]
+    ordering = ['created_at',]
