@@ -58,4 +58,19 @@ class Comment(models.Model):
     
     def __str__(self) -> str:
         return f'commentt {self.id}'
+
+
+class Favorite(models.Model):
+    user = models.ForeignKey(to=get_user_model(), related_name='favorites', on_delete=models.CASCADE)
+    post = models.ForeignKey(to=Post, on_delete=models.CASCADE)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    modified_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        # Make sure that the same user cannot add the same section to their favorites more than once
+        unique_together = ('user', 'post')
+
+    def __str__(self) -> str:
+        return f'{self.user}\'s favorite post is {self.post}'
     
