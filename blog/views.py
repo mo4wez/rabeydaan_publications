@@ -9,3 +9,9 @@ class PostListView(generic.ListView):
     template_name = 'blog/blog_list.html'
     context_object_name = 'posts'
     ordering = 'title'
+
+
+class PostDetailView(generic.DetailView):
+    mdoel = Post
+    template_name = 'blog/post_detail.html'
+    context_object_name = 'post'
